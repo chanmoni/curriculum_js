@@ -16,24 +16,13 @@
     function addText() {
         //①入力欄のテキストを取得
         let t1 = document.getElementById('text1').value;
-        console.log(t1);
         //②出力欄のテキストエリアを取得
-        let t2 = document.getElementById('area1').value;
-
-        t2 += t1 + "\n";
-
-             //memo//document.getElementById("area1").textContent = t1;
-        
+        let t2 = document.getElementById('area1');
         //③出力欄に入力された文字列を足していく
-        //document.t2.value += + t1 + "\n";
-
-            //let item = document.t2.createElement('text');
-            //item.textContent = 't1';
-            //t2.appendChild(t1);
+        t2.innerHTML += t1 + "\n";
     }
 
     function deleteText() {
-         console.log("hello");
         //④出力欄のテキストを空にする
         document.getElementById("area1").value = "";
         //⑤入力欄のテキストを空にする
@@ -42,3 +31,4 @@
     </script>
 </body>
 </html>
+
