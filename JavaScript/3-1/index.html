@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.js"
+    integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous">
+   </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <button class="click">クリック</button>
+    <script>
+    //  ここにjQueryを記入
+        $('button').click(function() {
+          console.log('クリック');
+          $(this).toggleClass("active");
+          var actionA = $(this).hasClass("active");
+          if (actionA == true) {
+            onFunc();
+          } else {
+            offFunc();
+          } 
+          function onFunc(){
+            $(".left").animate({width:'0%'},2000 );
+            $(".right").animate({width:'0%'},2000 );
+          } 
+          function offFunc(){
+            $(".left").animate({width:'50%'},2000 );
+            $(".right").animate({width:'50%'},2000 );
+          }
+         }
+      )
+    </script>
+  </body>
+</html>
