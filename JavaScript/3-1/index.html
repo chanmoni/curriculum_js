@@ -19,25 +19,12 @@
     <button class="click">クリック</button>
     <script>
     //  ここにjQueryを記入
-        $('button').click(function() {
-          console.log('クリック');
-          $(this).toggleClass("active");
-          var actionA = $(this).hasClass("active");
-          if (actionA == true) {
-            onFunc();
-          } else {
-            offFunc();
-          } 
-          function onFunc(){
-            $(".left").animate({width:'0%'},2000 );
-            $(".right").animate({width:'0%'},2000 );
-          } 
-          function offFunc(){
-            $(".left").animate({width:'50%'},2000 );
-            $(".right").animate({width:'50%'},2000 );
-          }
-         }
-      )
+    $('button').on('click', function() {
+      $('.left').toggleClass('action')
+      $('.right').toggleClass('action')
+    });
+  
+ 
     </script>
   </body>
 </html>
